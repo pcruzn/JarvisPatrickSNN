@@ -5,14 +5,14 @@ import org.apache.spark.rdd.RDD
 import org.apache.spark.sql.SparkSession
 import org.apache.spark.graphx._
 import scala.math.random
-import org.apache.log4j._
+
 
 
 object JarvisPatrickSNN {
   def main(args: Array[String]) = {
-    Logger.getLogger("org").setLevel(Level.ERROR)
     
-    type	VertexId	=	Long
+    
+    type VertexId = Long
     
     val sparkConf = new SparkConf().setAppName("Spark Test").setMaster("local[2]").set("spark.executor.memory", "1g");
     //val sparkContext = new SparkContext(sparkConf)
